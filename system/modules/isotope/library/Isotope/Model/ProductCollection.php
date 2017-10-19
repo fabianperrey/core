@@ -795,7 +795,7 @@ abstract class ProductCollection extends TypeAgent implements IsotopeProductColl
                 }
             }
 
-            $this->arrCache['total'] = $fltAmount > 0 ? $fltAmount : 0;
+            $this->arrCache['total'] = $fltAmount > 0 ? Isotope::roundPrice($fltAmount) : 0;
         }
 
         return $this->arrCache['total'];
